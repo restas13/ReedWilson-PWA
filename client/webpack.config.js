@@ -18,18 +18,26 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'JATE'
+      }),
+      new InjectManifest ({
+        swSrc: './src-sw.js',
+        swDest: './src-sw.js'
+      })
+
     ],
 
     module: {
       rules: [
-        { test: /\.css$/, use: 'css-loader'},
+        { test: /\.css$/, use: 'css-loader' },
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
-            
+
             options: {
               presets: ['@babel/preset-env'],
               plugins: ['@babel/transform-runtime'],
