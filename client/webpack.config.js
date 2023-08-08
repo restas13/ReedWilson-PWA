@@ -25,6 +25,18 @@ module.exports = () => {
       new InjectManifest ({
         swSrc: './src-sw.js',
         swDest: './src-sw.js'
+      }),
+      new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name: 'Text editor',
+        short_name: 'JATE',
+        description: 'Takes some pretty sick notes with this app!',
+        background_color: '#333333',
+        theme_color: '#333333',
+        start_url: '/',
+        publicPath: '/',
+        
       })
 
     ],

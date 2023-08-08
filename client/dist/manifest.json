@@ -1,0 +1,10 @@
+{
+  "name": "Text editor",
+  "short_name": "JATE",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "/",
+  "description": "Takes some pretty sick notes with this app!",
+  "background_color": "#333333",
+  "theme_color": "#333333"
+}
