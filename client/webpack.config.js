@@ -22,7 +22,7 @@ module.exports = () => {
         template: './index.html',
         title: 'JATE'
       }),
-      new InjectManifest ({
+      new InjectManifest({
         swSrc: './src-sw.js',
         swDest: './src-sw.js'
       }),
@@ -36,7 +36,12 @@ module.exports = () => {
         theme_color: '#333333',
         start_url: '/',
         publicPath: '/',
-        
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          }],
       })
 
     ],
